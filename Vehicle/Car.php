@@ -1,6 +1,6 @@
 <?php
 
-class Vehicle
+class Car
 {
     private int $nbWheels;
     private int $currentSpeed;
@@ -8,9 +8,11 @@ class Vehicle
     private int $nbSeats;
     private string $energy;
     private int $energyLevel;
+    private string $ubniqueId;
 
     public function __construct (string $color, int $nbSeats, string $energy)
     {
+        $this->ubniqueId = uniqid();
         $this->color = $color;
         $this->nbSeats = $nbSeats;
         $this->energy = $energy;

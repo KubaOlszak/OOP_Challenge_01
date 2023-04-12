@@ -1,10 +1,14 @@
 <?php
 
-require_once './Vehicle/Vehicle.php';
+require_once './Vehicle/Car.php';
+require_once './Vehicle/Bicycle.php';
 
-$carYellow = new Vehicle('yellow', 5, 'électrique');
-$carRed = new Vehicle('red', 4, 'fuel');
-$bicycle = new Vehicle('blue', 1, 'physique');
+$carYellow = new Car('yellow', 5, 'électrique');
+var_dump($carYellow);
+$carRed = new Car('red', 4, 'fuel');
+var_dump($carRed);
+$bicycle = new Bicycle('blue', 1, 'physique');
+var_dump($bicycle);
 
 echo $carYellow->start('Car Y');
 echo "Car Y roule à " . $carYellow->forward(10) . " km/h <br><br>";
